@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI PDF Chatbot Pro</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🤖 AI PDF Chatbot</h2>
+
+            <p>Powered by Gemini AI</p>
+
+        </div>
+
+        <div class="upload-section">
+
+            <h3>Upload PDF</h3>
+
+            <input type="file"
+                   id="pdfFile"
+                   accept=".pdf">
+
+            <button id="uploadBtn">
+
+                📄 Upload PDF
+
+            </button>
+
+            <div class="file-card">
+
+                <strong>Selected File</strong>
+
+                <p id="selectedFile">
+
+                    No PDF Selected
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="uploaded-files">
+
+            <h3>Uploaded PDF</h3>
+
+            <ul id="fileList">
+
+                <li>No PDF Uploaded</li>
+
+            </ul>
+
+        </div>
+
+        <button id="clearChat">
+
+            🗑 Clear Chat
+
+        </button>
+
+    </aside>
+
+
+    <!-- Main Chat -->
+
+    <main class="chat-container">
+
+        <header>
+
+            <h1>
+
+                AI PDF Assistant
+
+            </h1>
+
+            <p>
+
+                Ask anything from your uploaded document
+
+            </p>
+
+        </header>
+
+
+        <div id="chatArea">
+
+            <div class="bot-message">
+
+                👋 Hello! Upload a PDF and ask your first question.
+
+            </div>
+
+        </div>
+
+
+        <div class="input-area">
+
+            <textarea
+                id="question"
+                placeholder="Ask a question..."
+            ></textarea>
+
+            <button id="askBtn">
+
+                Send ➜
+
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
